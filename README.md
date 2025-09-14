@@ -2,4 +2,4 @@
 
 Created a model to simplify complex legal documents with automated interpretation. 
 Implemented OAuth authentication, user profiles, and dashboards for secure, personalized access. 
-Enabled multilingual support and document upload to broaden usability.
+Enabled multilingual support and document upload to broaden usability. (This is basic text to describe the project)
