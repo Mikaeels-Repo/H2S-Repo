@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Analysis Result</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            /* Updated background color */
+            background-color: #9BB7E0
+        }
+        .container-fluid {
+            padding: 2rem;
+        }
+        .card {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: none;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            
+            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            
+            background-color: rgba(255, 255, 255, 0.5);
+        }
+        .card-header {
+            background-color: rgba(19, 70, 134, 1);
+            color: white;
+            font-weight: 600;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+            padding: 1rem 1.25rem;
+        }
+        .card-header h2 {
+            color: white;
+            margin-bottom: 0;
+        }
+        .highlight {
+            background-color: #ffffff;
+            color: #464f5794;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+        pre {
+            background-color: rgba(248, 249, 250, 0.8);
+            padding: 1rem;
+            border-radius: 5px;
+            border: 1px solid rgba(222, 226, 230, 0.8);
+        }
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        ul li {
+            background-color: rgba(248, 249, 250, 0.8);
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 5px;
+            border-left: 4px solid #ced4da;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-fluid mt-5">
+        <div class="row">
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Original Document</h2>
+                    </div>
+                    <div class="card-body">
+                        <pre>{{ text }}</pre>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Simplified Document</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>
+                            {% set simplified_text = text %}
+                            {% for phrase, explanation in annotations.items() %}
+                                {% set simplified_text = simplified_text.replace(phrase, '<span class="highlight">' + phrase + '</span>') %}
+                            {% endfor %}
+                            {{ simplified_text | safe }}
+                        </p>
+                        <hr>
+                        <h3>Simplified Phrases</h3>
+                        <ul>
+                            {% for phrase, explanation in annotations.items() %}
+                                <li><strong>{{ phrase }}:</strong> {{ explanation }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h2>Summary</h2>
+                    </div>
+                    <div class="card-body">
+                        <p>{{ summary }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
