@@ -4,62 +4,120 @@
     <meta charset="UTF-8">
     <title>Analysis Result</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
-            /* Updated background color */
-            background-color: #9BB7E0
+            /* Unique, dynamic gradient background to ensure blur works */
+            background: linear-gradient(45deg, #134686, #0d1a29, #18529e, #134686);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+
+            color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
         }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .container-fluid {
             padding: 2rem;
         }
+        
         .card {
-            background-color: rgba(255, 255, 255, 0.8);
-            border: none;
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px); /* Increased blur for a more dramatic effect */
+            border: 1px solid rgba(255, 255, 255, 0.3);
             border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            color: #f5f5f5;
             
-            transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            animation: fadeIn 1s ease-out forwards;
         }
+
         .card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-            
-            background-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
         }
+
         .card-header {
-            background-color: rgba(19, 70, 134, 1);
-            color: white;
+            background-color: rgba(19, 70, 134, 0.4);
+            backdrop-filter: blur(5px);
+            color: #fff;
             font-weight: 600;
             border-top-left-radius: 8px;
             border-top-right-radius: 8px;
             padding: 1rem 1.25rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
         }
+        
         .card-header h2 {
             color: white;
             margin-bottom: 0;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
         }
-        .highlight {
-            background-color: #ffffff;
-            color: #464f5794;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
+
         pre {
-            background-color: rgba(248, 249, 250, 0.8);
+            background-color: rgba(248, 249, 250, 0.1);
             padding: 1rem;
             border-radius: 5px;
-            border: 1px solid rgba(222, 226, 230, 0.8);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: #f5f5f5;
         }
+        
+        hr {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 2rem 0;
+        }
+
         ul {
             list-style-type: none;
             padding-left: 0;
         }
+        
         ul li {
-            background-color: rgba(248, 249, 250, 0.8);
+            background-color: rgba(248, 249, 250, 0.1);
             padding: 0.75rem 1rem;
             margin-bottom: 0.5rem;
             border-radius: 5px;
-            border-left: 4px solid #ced4da;
+            border-left: 4px solid #9BB7E0;
+            transition: border-color 0.3s ease;
+        }
+        
+        ul li:hover {
+            border-left-color: #fff;
+        }
+
+        .highlight {
+            background-color: rgba(255, 255, 255, 0.3);
+            color: #fff;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        a {
+            color: #9BB7E0;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
