@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequently Asked Questions</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        @keyframes glowing-orb {
+            0% { transform: scale(1.0); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1.0); }
+        }
+        
+        @keyframes gradient-animation {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        body {
+            background: linear-gradient(45deg, #134686, #0d1a29, #18529e, #134686);
+            background-size: 400% 400%;
+            animation: gradient-animation 15s ease infinite;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #f5f5f5;
+            font-family: 'Poppins', sans-serif;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 4rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            max-width: 800px;
+            width: 100%;
+            text-align: left;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            animation: fadeIn 1s ease-out forwards;
+            position: relative;
+            overflow-y: auto; /* Enable scrolling for content */
+            max-height: 90vh; /* Limit height to prevent overflow */
+        }
+        
+        h1, h3 {
+            color: #fff;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: #ddd;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        hr {
+            border-top: 1px solid rgba(255, 255, 255, 0.3);
+            margin: 2rem 0;
+        }
+
+        a {
+            color: #9BB7E0;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #fff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Frequently Asked Questions</h1>
+
+        <h3>1. How do I file for divorce in India?</h3>
+        <p>A divorce is initiated by filing a petition in the Family Court with jurisdiction. Divorce can be through mutual consent or as a contested case. For mutual consent, both parties must show a year’s separation and jointly petition; a mandatory six-month cooling-off may be waived by the court. Contested divorces require stating grounds such as cruelty, adultery, or desertion according to applicable personal law. Documentation includes marriage certificate, proof of separation, and address/ID proof for both parties.</p>
+
+        <h3>2. How can I resolve a property or inheritance dispute?</h3>
+        <p>Such disputes are resolved by approaching a civil court with all property documents, proof of title or succession certificate, and evidence of ownership. Mediation is encouraged as a first step. If mediation fails, the court will adjudicate based on evidence and legal ownership records.</p>
+
+        <h3>3. What is the process to register a marriage?</h3>
+        <p>Marriages are registered at the local office of the Registrar of Marriages. Required documents include proof of identity, address, age, photographs, and witnesses. Both spouses and three witnesses must appear in person for document verification, after which a certificate is issued.</p>
+
+        <h3>4. How can I file a consumer complaint against a product/service?</h3>
+        <p>Consumer complaints can be made online at consumerhelpline.gov.in or physically at the local District Consumer Forum. Include bills, warranty cards, service records, and a description of the grievance. Hearings are held and relief or compensation is granted if the complaint is upheld.</p>
+
+        <h3>5. What are my rights if terminated from my job?</h3>
+        <p>If employment is terminated unlawfully, the worker can approach the Labour Court or Industrial Tribunal. Rights include receiving due notice period or compensation for absence of notice, and contesting wrongful termination through a complaint or legal notice.</p>
+
+        <h3>6. How do I file an FIR or seek bail in a criminal case?</h3>
+        <p>An FIR (First Information Report) can be filed at any police station for cognizable offenses; police cannot refuse registration. For bail, a formal application must be made in the court where the case is pending; a lawyer helps present grounds for bail, and the court decides based on legal criteria.</p>
+
+        <h3>7. How do I draft a will or transfer property?</h3>
+        <p>A will should be written, signed by the testator, and attested by two witnesses. For property transfer, execute a sale/gift deed and get it registered at the local sub-registrar after paying applicable stamp duty.</p>
+
+        <h3>8. What should I do in case of landlord-tenant disputes?</h3>
+        <p>Negotiate or mediate first. If unresolved, complaints go to the Rent Control Court or civil court. Submit all agreements, rent receipts, and communications as evidence; courts can order eviction, arrears recovery, or rent fixation.</p>
+
+        <h3>9. Is monitoring someone’s social media or device legal?</h3>
+        <p>Unauthorized access or surveillance of someone’s online accounts or devices is illegal under the Information Technology Act, 2000. Victims can approach the Cyber Crime Cell and lodge a criminal complaint.</p>
+
+        <h3>10. How can I protect my privacy and prevent unauthorized device access?</h3>
+        <p>Use strong passwords, security software, refrain from sharing device details, and update systems regularly. If you face a privacy breach, file a cybercrime complaint online or at the nearest police station; legal remedy is available under the Information Technology Act.</p>
+
+        <a href="/dashboard-new" class="btn btn-primary mt-4">Back to Dashboard</a>
+    </div>
+</body>
+</html>
